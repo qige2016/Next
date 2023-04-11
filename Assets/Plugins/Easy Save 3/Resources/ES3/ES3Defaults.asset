@@ -29,37 +29,23 @@ MonoBehaviour:
     referenceMode: 2
     serializationDepthLimit: 64
     assemblyNames:
-    - Assembly-CSharp-firstpass
-    - Assembly-CSharp
-    - ZhanGuoWuxia.Backend
     - UniTask
-    - ES3
-    - CW.Common
     - UniTask.Linq
-    - Cinemachine
-    - Xlua.Core
-    - ToonyColorsPro2.Demo
-    - Animancer
-    - Animancer.Examples
-    - LeanPool
-    - UniTask.DOTween
-    - LubanLib
-    - Sirenix.OdinInspector.CompatibilityLayer
-    - Animancer.FSM
-    - IngameDebugConsole.Runtime
-    - ToonyColorsPro.Runtime
-    - LeanCommon
     - UniTask.TextMeshPro
-    - FastBootGame
+    - UniTask.DOTween
     - UniTask.Addressables
-    - Sirenix.OdinInspector.CompatibilityLayer.Editor
-    - ToonyColorsPro.Editor
+    - VContainer
+    - VContainer.EnableCodeGen
+    - ES3
+    - Sirenix.OdinInspector.CompatibilityLayer
+    - Assembly-CSharp-firstpass
+    - Next.Backend
+    - LubanLib
     - UniTask.Editor
-    - ZhanGuoWuxia.Test
-    - IngameDebugConsole.Editor
-    - Xlua.Core.Editor
-    - ToonyColorsPro.Demo.Editor
+    - VContainer.Editor
+    - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
+    - Luban.Editor
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1
