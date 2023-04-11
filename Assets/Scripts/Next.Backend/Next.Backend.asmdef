@@ -1,0 +1,16 @@
+{
+    "name": "Next.Backend",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7e4e10e2c6ce59042a1fc16226218e3a"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
