@@ -1,20 +1,20 @@
 {
   "dependencies": {
-    "com.cysharp.unitask": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
-    "com.liuocean.luban_gui": "https://github.com/LiuOcean/Luban_Unity_GUI.git?path=Assets/",
+    "com.cysharp.unitask": "file:../LocalPackages/UniTask",
+    "com.liuocean.luban_gui": "file:../LocalPackages/LubanGUI",
     "com.unity.collab-proxy": "1.15.17",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.14",
     "com.unity.ide.visualstudio": "2.0.15",
     "com.unity.ide.vscode": "1.2.5",
     "com.unity.mathematics": "1.2.6",
+    "com.unity.nuget.mono-cecil": "1.10.1",
     "com.unity.nuget.newtonsoft-json": "3.0.2",
     "com.unity.test-framework": "1.1.31",
     "com.unity.textmeshpro": "3.0.6",
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
-    "jp.hadashikick.vcontainer": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
     "com.unity.modules.animation": "1.0.0",
@@ -45,6 +45,7 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0"
+    "com.unity.modules.xr": "1.0.0",
+    "jp.hadashikick.vcontainer": "file:../LocalPackages/VContainer"
   }
 }

@@ -30,22 +30,22 @@ MonoBehaviour:
     serializationDepthLimit: 64
     assemblyNames:
     - UniTask
-    - UniTask.Linq
-    - UniTask.TextMeshPro
-    - UniTask.DOTween
-    - UniTask.Addressables
     - VContainer
-    - VContainer.EnableCodeGen
-    - ES3
-    - Sirenix.OdinInspector.CompatibilityLayer
     - Assembly-CSharp-firstpass
-    - Next.Backend
+    - ES3
+    - UniTask.Linq
+    - UniTask.DOTween
     - LubanLib
+    - Sirenix.OdinInspector.CompatibilityLayer
+    - VContainer.EnableCodeGen
+    - Next.Backend
+    - UniTask.TextMeshPro
+    - UniTask.Addressables
+    - Sirenix.OdinInspector.CompatibilityLayer.Editor
+    - Luban.Editor
     - UniTask.Editor
     - VContainer.Editor
-    - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
-    - Luban.Editor
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

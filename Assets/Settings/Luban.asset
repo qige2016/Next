@@ -22,7 +22,7 @@ MonoBehaviour:
   gen_types: 4
   service: all
   output_data_dir: 
-  output_code_dir: Assets/Scripts/Next.Backend/Domains/Beans
+  output_code_dir: Assets/Scripts/Next.Backend/Luban
   output_data_resources_list_file: 
   output_exclude_tags: 
   output_data_file_extension: 

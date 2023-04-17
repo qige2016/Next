@@ -1,18 +1,16 @@
 {
   "dependencies": {
     "com.cysharp.unitask": {
-      "version": "https://github.com/Cysharp/UniTask.git?path=src/UniTask/Assets/Plugins/UniTask",
+      "version": "file:../LocalPackages/UniTask",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "73d86259ce31ce7f4dfe1d028ea1c3edf96c23e4"
+      "source": "local",
+      "dependencies": {}
     },
     "com.liuocean.luban_gui": {
-      "version": "https://github.com/LiuOcean/Luban_Unity_GUI.git?path=Assets/",
+      "version": "file:../LocalPackages/LubanGUI",
       "depth": 0,
-      "source": "git",
-      "dependencies": {},
-      "hash": "d31420becf672f5eee196af7aa33ccc1a8b20b32"
+      "source": "local",
+      "dependencies": {}
     },
     "com.unity.collab-proxy": {
       "version": "1.15.17",
@@ -85,7 +83,7 @@
     },
     "com.unity.nuget.mono-cecil": {
       "version": "1.10.1",
-      "depth": 1,
+      "depth": 0,
       "source": "registry",
       "dependencies": {},
       "url": "https://packages.unity.cn"
@@ -184,13 +182,12 @@
       "url": "https://packages.unity.cn"
     },
     "jp.hadashikick.vcontainer": {
-      "version": "https://github.com/hadashiA/VContainer.git?path=VContainer/Assets/VContainer",
+      "version": "file:../LocalPackages/VContainer",
       "depth": 0,
-      "source": "git",
+      "source": "local",
       "dependencies": {
         "com.unity.nuget.mono-cecil": "1.10.1"
-      },
-      "hash": "0a1e11bb0da0b9c2f0ad86b78cbe76737589ac4a"
+      }
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",
