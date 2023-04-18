@@ -1,4 +1,13 @@
 {
+  "scopedRegistries": [
+    {
+      "name": "Unity NuGet",
+      "url": "https://unitynuget-registry.azurewebsites.net",
+      "scopes": [
+        "org.nuget"
+      ]
+    }
+  ],
   "dependencies": {
     "com.cysharp.unitask": "file:../LocalPackages/UniTask",
     "com.liuocean.luban_gui": "file:../LocalPackages/LubanGUI",
@@ -46,6 +55,8 @@
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
     "com.unity.modules.xr": "1.0.0",
-    "jp.hadashikick.vcontainer": "file:../LocalPackages/VContainer"
+    "jp.hadashikick.vcontainer": "file:../LocalPackages/VContainer",
+    "org.nuget.scriban": "2.1.0",
+    "riok.mapperly": "file:../LocalPackages/Riok.Mapperly"
   }
 }

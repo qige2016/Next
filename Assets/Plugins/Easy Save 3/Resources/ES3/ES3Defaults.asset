@@ -38,9 +38,9 @@ MonoBehaviour:
     - LubanLib
     - Sirenix.OdinInspector.CompatibilityLayer
     - VContainer.EnableCodeGen
-    - Next.Backend
     - UniTask.TextMeshPro
     - UniTask.Addressables
+    - Next.Backend
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - Luban.Editor
     - UniTask.Editor

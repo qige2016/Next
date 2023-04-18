@@ -1,6 +1,0 @@
-<module name="item">
-  <bean name="ItemExchange" sep=",">
-    <var name="id" type="int"/>
-    <var name="num" type="int"/>
-  </bean>
-</module>

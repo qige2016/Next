@@ -17,12 +17,12 @@ MonoBehaviour:
   which_dll: Tools/Luban.ClientServer/Luban.ClientServer.dll
   tpl_path: Tools/Luban.ClientServer/Templates
   job: cfg --
-  define_xml: Data/Defines/__root__.xml
-  input_data_dir: Data/Datas
-  gen_types: 4
+  define_xml: DesignerConfigs/Defines/__root__.xml
+  input_data_dir: DesignerConfigs/Datas
+  gen_types: 4194308
   service: all
-  output_data_dir: 
-  output_code_dir: Assets/Scripts/Next.Backend/Luban
+  output_data_dir: Assets/StreamingAssets/GenerateDatas/Json
+  output_code_dir: Assets/Scripts/Next.Backend/Bean/Gen
   output_data_resources_list_file: 
   output_exclude_tags: 
   output_data_file_extension: 
