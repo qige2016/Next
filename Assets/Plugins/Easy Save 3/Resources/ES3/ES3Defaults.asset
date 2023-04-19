@@ -34,18 +34,19 @@ MonoBehaviour:
     - Assembly-CSharp-firstpass
     - ES3
     - UniTask.Linq
+    - Next.Backend
     - UniTask.DOTween
     - LubanLib
     - Sirenix.OdinInspector.CompatibilityLayer
     - VContainer.EnableCodeGen
     - UniTask.TextMeshPro
     - UniTask.Addressables
-    - Next.Backend
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
     - Luban.Editor
     - UniTask.Editor
     - VContainer.Editor
     - Sirenix.OdinInspector.Modules.UnityMathematics
+    - Next.Test
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

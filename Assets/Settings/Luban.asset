@@ -19,7 +19,7 @@ MonoBehaviour:
   job: cfg --
   define_xml: DesignerConfigs/Defines/__root__.xml
   input_data_dir: DesignerConfigs/Datas
-  gen_types: 4194308
+  gen_types: 1028
   service: all
   output_data_dir: Assets/StreamingAssets/GenerateDatas/Json
   output_code_dir: Assets/Scripts/Next.Backend/Bean/Gen

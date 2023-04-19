@@ -14,8 +14,7 @@ using SimpleJSON;
 namespace Next.Backend.Bean
 { 
 
-public sealed partial class TbRole
-{
+public sealed partial class TbRole :ITable<int, RoleBean>{
     private readonly Dictionary<int, RoleBean> _dataMap;
     private readonly List<RoleBean> _dataList;
     

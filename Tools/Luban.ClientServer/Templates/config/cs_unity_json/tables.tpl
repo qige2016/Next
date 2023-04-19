@@ -1,3 +1,6 @@
+using System;
+using System.Collections.Generic;
+using Bright.Config;
 using Bright.Serialization;
 using SimpleJSON;
 {{
@@ -10,6 +13,8 @@ using SimpleJSON;
    
 public sealed partial class {{name}}
 {
+    private readonly Dictionary<Type, ITable> _tables = new Dictionary<Type, ITable>();
+
     {{~for table in tables ~}}
 {{~if table.comment != '' ~}}
     /// <summary>
@@ -19,12 +24,13 @@ public sealed partial class {{name}}
     public {{table.full_name}} {{table.name}} {get; }
     {{~end~}}
 
-    public {{name}}(System.Func<string, JSONNode> loader)
+    public {{name}}(Func<string, JSONNode> loader)
     {
-        var tables = new System.Collections.Generic.Dictionary<string, object>();
+        var tables = new Dictionary<string, object>();
         {{~for table in tables ~}}
         {{table.name}} = new {{table.full_name}}(loader("{{table.output_data_file}}")); 
         tables.Add("{{table.full_name}}", {{table.name}});
+        _tables.Add(typeof({{table.value_type}}), {{table.name}});
         {{~end~}}
         PostInit();
 
@@ -34,7 +40,13 @@ public sealed partial class {{name}}
         PostResolve();
     }
 
-    public void TranslateText(System.Func<string, string, string> translator)
+    public ITable GetTable<TBean>() where TBean : BeanBase
+    {
+        _tables.TryGetValue(typeof(TBean), out var table);
+        return table;
+    }
+
+    public void TranslateText(Func<string, string, string> translator)
     {
         {{~for table in tables ~}}
         {{table.name}}.TranslateText(translator); 

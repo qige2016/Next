@@ -14,8 +14,7 @@ using SimpleJSON;
 namespace Next.Backend.Bean
 { 
 
-public sealed partial class TbItem
-{
+public sealed partial class TbItem :ITable<int, ItemBean>{
     private readonly Dictionary<int, ItemBean> _dataMap;
     private readonly List<ItemBean> _dataList;
     

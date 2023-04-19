@@ -1,4 +1,5 @@
 ﻿using System.IO;
+using Bright.Config;
 using SimpleJSON;
 
 namespace Next.Backend.Bean

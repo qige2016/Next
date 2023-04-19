@@ -1,4 +1,5 @@
 ﻿using System.Collections.Generic;
+using Next.Backend.Bean;
 using Next.Backend.Entities;
 
 namespace Next.Backend.Repositories

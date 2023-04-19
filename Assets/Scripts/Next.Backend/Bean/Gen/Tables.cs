@@ -5,6 +5,9 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System;
+using System.Collections.Generic;
+using Bright.Config;
 using Bright.Serialization;
 using SimpleJSON;
 
@@ -14,16 +17,20 @@ namespace Next.Backend.Bean
    
 public sealed partial class Tables
 {
+    private readonly Dictionary<Type, ITable> _tables = new Dictionary<Type, ITable>();
+
     public TbItem TbItem {get; }
     public TbRole TbRole {get; }
 
-    public Tables(System.Func<string, JSONNode> loader)
+    public Tables(Func<string, JSONNode> loader)
     {
-        var tables = new System.Collections.Generic.Dictionary<string, object>();
+        var tables = new Dictionary<string, object>();
         TbItem = new TbItem(loader("tbitem")); 
         tables.Add("TbItem", TbItem);
+        _tables.Add(typeof(ItemBean), TbItem);
         TbRole = new TbRole(loader("tbrole")); 
         tables.Add("TbRole", TbRole);
+        _tables.Add(typeof(RoleBean), TbRole);
         PostInit();
 
         TbItem.Resolve(tables); 
@@ -31,7 +38,13 @@ public sealed partial class Tables
         PostResolve();
     }
 
-    public void TranslateText(System.Func<string, string, string> translator)
+    public ITable GetTable<TBean>() where TBean : BeanBase
+    {
+        _tables.TryGetValue(typeof(TBean), out var table);
+        return table;
+    }
+
+    public void TranslateText(Func<string, string, string> translator)
     {
         TbItem.TranslateText(translator); 
         TbRole.TranslateText(translator); 
