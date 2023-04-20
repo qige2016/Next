@@ -6,7 +6,11 @@ namespace Next.Backend.Bean
     {
     }
 
-    public interface ITable<in TKey, out TBean> : ITable where TBean : BeanBase
+    public interface ITable<TBean> : ITable where TBean : BeanBase
+    {
+    }
+
+    public interface ITable<TBean, TKey> : ITable<TBean> where TBean : BeanBase
     {
         TBean GetOrDefault(TKey key);
         TBean Get(TKey key);

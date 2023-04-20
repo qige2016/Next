@@ -13,7 +13,7 @@ using SimpleJSON;
    
 public sealed partial class {{name}}
 {
-    private readonly Dictionary<Type, ITable> _tables = new Dictionary<Type, ITable>();
+    private readonly Dictionary<string, object> _tables = new Dictionary<string, object>();
 
     {{~for table in tables ~}}
 {{~if table.comment != '' ~}}
@@ -26,24 +26,21 @@ public sealed partial class {{name}}
 
     public {{name}}(Func<string, JSONNode> loader)
     {
-        var tables = new Dictionary<string, object>();
         {{~for table in tables ~}}
         {{table.name}} = new {{table.full_name}}(loader("{{table.output_data_file}}")); 
-        tables.Add("{{table.full_name}}", {{table.name}});
-        _tables.Add(typeof({{table.value_type}}), {{table.name}});
+        _tables.Add("{{table.value_type}}", {{table.name}});
         {{~end~}}
         PostInit();
 
         {{~for table in tables ~}}
-        {{table.name}}.Resolve(tables); 
+        {{table.name}}.Resolve(_tables); 
         {{~end~}}
         PostResolve();
     }
 
-    public ITable GetTable<TBean>() where TBean : BeanBase
+    public ITable<TBean, TKey> GetTable<TBean, TKey>() where TBean : BeanBase
     {
-        _tables.TryGetValue(typeof(TBean), out var table);
-        return table;
+        return (ITable<TBean, TKey>) _tables[typeof(TBean).Name];
     }
 
     public void TranslateText(Func<string, string, string> translator)

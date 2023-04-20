@@ -17,31 +17,27 @@ namespace Next.Backend.Bean
    
 public sealed partial class Tables
 {
-    private readonly Dictionary<Type, ITable> _tables = new Dictionary<Type, ITable>();
+    private readonly Dictionary<string, object> _tables = new Dictionary<string, object>();
 
     public TbItem TbItem {get; }
     public TbRole TbRole {get; }
 
     public Tables(Func<string, JSONNode> loader)
     {
-        var tables = new Dictionary<string, object>();
         TbItem = new TbItem(loader("tbitem")); 
-        tables.Add("TbItem", TbItem);
-        _tables.Add(typeof(ItemBean), TbItem);
+        _tables.Add("ItemBean", TbItem);
         TbRole = new TbRole(loader("tbrole")); 
-        tables.Add("TbRole", TbRole);
-        _tables.Add(typeof(RoleBean), TbRole);
+        _tables.Add("RoleBean", TbRole);
         PostInit();
 
-        TbItem.Resolve(tables); 
-        TbRole.Resolve(tables); 
+        TbItem.Resolve(_tables); 
+        TbRole.Resolve(_tables); 
         PostResolve();
     }
 
-    public ITable GetTable<TBean>() where TBean : BeanBase
+    public ITable<TBean, TKey> GetTable<TBean, TKey>() where TBean : BeanBase
     {
-        _tables.TryGetValue(typeof(TBean), out var table);
-        return table;
+        return (ITable<TBean, TKey>) _tables[typeof(TBean).Name];
     }
 
     public void TranslateText(Func<string, string, string> translator)

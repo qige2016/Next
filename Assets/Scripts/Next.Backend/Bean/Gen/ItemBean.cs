@@ -18,7 +18,7 @@ public sealed partial class ItemBean :  Bright.Config.BeanBase
 {
     public ItemBean(JSONNode _json) 
     {
-        { if(!_json["id"].IsNumber) { throw new SerializationException(); }  Id = _json["id"]; }
+        { if(!_json["id"].IsString) { throw new SerializationException(); }  Id = _json["id"]; }
         { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
         { if(!_json["desc"].IsString) { throw new SerializationException(); }  Desc = _json["desc"]; }
         { if(!_json["price"].IsNumber) { throw new SerializationException(); }  Price = _json["price"]; }
@@ -27,7 +27,7 @@ public sealed partial class ItemBean :  Bright.Config.BeanBase
         PostInit();
     }
 
-    public ItemBean(int id, string name, string desc, int price, long? expire_time, bool batch_useable ) 
+    public ItemBean(string id, string name, string desc, int price, long? expire_time, bool batch_useable ) 
     {
         this.Id = id;
         this.Name = name;
@@ -46,7 +46,7 @@ public sealed partial class ItemBean :  Bright.Config.BeanBase
     /// <summary>
     /// 这是id
     /// </summary>
-    public int Id { get; private set; }
+    public string Id { get; private set; }
     /// <summary>
     /// 名字
     /// </summary>

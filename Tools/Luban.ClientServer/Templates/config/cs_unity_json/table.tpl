@@ -17,7 +17,7 @@ using SimpleJSON;
 /// {{x.escape_comment}}
 /// </summary>
 {{~end~}}
-public sealed partial class {{name}} : {{~if x.is_map_table ~}} ITable<{{cs_define_type key_type}}, {{cs_define_type value_type}}> {{~end~}}
+public sealed partial class {{name}} : {{~if x.is_map_table ~}} ITable<{{cs_define_type value_type}}, {{cs_define_type key_type}}> {{~end~}}
 {
     {{~if x.is_map_table ~}}
     private readonly Dictionary<{{cs_define_type key_type}}, {{cs_define_type value_type}}> _dataMap;

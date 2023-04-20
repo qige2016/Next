@@ -14,13 +14,13 @@ using SimpleJSON;
 namespace Next.Backend.Bean
 { 
 
-public sealed partial class TbItem :ITable<int, ItemBean>{
-    private readonly Dictionary<int, ItemBean> _dataMap;
+public sealed partial class TbItem :ITable<ItemBean, string>{
+    private readonly Dictionary<string, ItemBean> _dataMap;
     private readonly List<ItemBean> _dataList;
     
     public TbItem(JSONNode _json)
     {
-        _dataMap = new Dictionary<int, ItemBean>();
+        _dataMap = new Dictionary<string, ItemBean>();
         _dataList = new List<ItemBean>();
         
         foreach(JSONNode _row in _json.Children)
@@ -32,12 +32,12 @@ public sealed partial class TbItem :ITable<int, ItemBean>{
         PostInit();
     }
 
-    public Dictionary<int, ItemBean> DataMap => _dataMap;
+    public Dictionary<string, ItemBean> DataMap => _dataMap;
     public List<ItemBean> DataList => _dataList;
 
-    public ItemBean GetOrDefault(int key) => _dataMap.TryGetValue(key, out var v) ? v : null;
-    public ItemBean Get(int key) => _dataMap[key];
-    public ItemBean this[int key] => _dataMap[key];
+    public ItemBean GetOrDefault(string key) => _dataMap.TryGetValue(key, out var v) ? v : null;
+    public ItemBean Get(string key) => _dataMap[key];
+    public ItemBean this[string key] => _dataMap[key];
 
     public void Resolve(Dictionary<string, object> _tables)
     {

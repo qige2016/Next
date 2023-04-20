@@ -13,5 +13,19 @@ namespace Next.Test.Bean.Tests
             var tbItem = tables.TbItem;
             Assert.IsNotNull(tbItem);
         }
+
+        [Test]
+        public void GetTable_Should_Return_Table()
+        {
+            var table = BeanHelper.GetTable<ItemBean>();
+            Assert.IsNotNull(table);
+        }
+
+        [Test]
+        public void GetBean_Should_Return_Bean()
+        {
+            var bean = BeanHelper.GetBean<ItemBean>("10000");
+            Assert.IsNotNull(bean);
+        }
     }
 }
