@@ -12,6 +12,12 @@
       "source": "local",
       "dependencies": {}
     },
+    "com.razensoft.mapper": {
+      "version": "file:../LocalPackages/Razensoft.Mapper",
+      "depth": 0,
+      "source": "local",
+      "dependencies": {}
+    },
     "com.unity.collab-proxy": {
       "version": "1.15.17",
       "depth": 0,
@@ -213,12 +219,6 @@
         "org.nuget.system.runtime.compilerservices.unsafe": "4.5.0"
       },
       "url": "https://unitynuget-registry.azurewebsites.net"
-    },
-    "riok.mapperly": {
-      "version": "file:../LocalPackages/Riok.Mapperly",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
     },
     "com.unity.modules.ai": {
       "version": "1.0.0",

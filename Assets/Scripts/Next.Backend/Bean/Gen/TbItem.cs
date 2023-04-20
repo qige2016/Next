@@ -27,7 +27,7 @@ public sealed partial class TbItem :ITable<ItemBean, string>{
         {
             var _v = ItemBean.DeserializeItemBean(_row);
             _dataList.Add(_v);
-            _dataMap.Add(_v.Id, _v);
+            _dataMap.Add(_v.Key, _v);
         }
         PostInit();
     }

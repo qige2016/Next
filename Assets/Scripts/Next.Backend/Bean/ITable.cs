@@ -1,4 +1,5 @@
-﻿using Bright.Config;
+﻿using System.Collections.Generic;
+using Bright.Config;
 
 namespace Next.Backend.Bean
 {
@@ -15,5 +16,6 @@ namespace Next.Backend.Bean
         TBean GetOrDefault(TKey key);
         TBean Get(TKey key);
         TBean this[TKey key] { get; }
+        List<TBean> DataList { get; }
     }
 }

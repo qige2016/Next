@@ -27,7 +27,7 @@ public sealed partial class TbRole :ITable<RoleBean, string>{
         {
             var _v = RoleBean.DeserializeRoleBean(_row);
             _dataList.Add(_v);
-            _dataMap.Add(_v.Id, _v);
+            _dataMap.Add(_v.Key, _v);
         }
         PostInit();
     }

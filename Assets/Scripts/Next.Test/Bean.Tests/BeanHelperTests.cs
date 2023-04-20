@@ -17,14 +17,14 @@ namespace Next.Test.Bean.Tests
         [Test]
         public void GetTable_Should_Return_Table()
         {
-            var table = BeanHelper.GetTable<ItemBean>();
+            var table = BeanHelper.GetTable<ItemBean, string>();
             Assert.IsNotNull(table);
         }
 
         [Test]
         public void GetBean_Should_Return_Bean()
         {
-            var bean = BeanHelper.GetBean<ItemBean>("10000");
+            var bean = BeanHelper.GetBean<ItemBean, string>("10000");
             Assert.IsNotNull(bean);
         }
     }

@@ -18,15 +18,15 @@ public sealed partial class RoleBean :  Bright.Config.BeanBase
 {
     public RoleBean(JSONNode _json) 
     {
-        { if(!_json["id"].IsString) { throw new SerializationException(); }  Id = _json["id"]; }
+        { if(!_json["key"].IsString) { throw new SerializationException(); }  Key = _json["key"]; }
         { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
         { if(!_json["desc"].IsString) { throw new SerializationException(); }  Desc = _json["desc"]; }
         PostInit();
     }
 
-    public RoleBean(string id, string name, string desc ) 
+    public RoleBean(string key, string name, string desc ) 
     {
-        this.Id = id;
+        this.Key = key;
         this.Name = name;
         this.Desc = desc;
         PostInit();
@@ -38,9 +38,9 @@ public sealed partial class RoleBean :  Bright.Config.BeanBase
     }
 
     /// <summary>
-    /// 这是id
+    /// 这是key
     /// </summary>
-    public string Id { get; private set; }
+    public string Key { get; private set; }
     /// <summary>
     /// 名字
     /// </summary>
@@ -65,7 +65,7 @@ public sealed partial class RoleBean :  Bright.Config.BeanBase
     public override string ToString()
     {
         return "{ "
-        + "Id:" + Id + ","
+        + "Key:" + Key + ","
         + "Name:" + Name + ","
         + "Desc:" + Desc + ","
         + "}";

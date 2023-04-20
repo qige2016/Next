@@ -13,14 +13,15 @@ namespace Next.Backend.Bean
                     System.Text.Encoding.UTF8)));
         }
 
-        public static ITable<TBean, string> GetTable<TBean>() where TBean : BeanBase
+        public static ITable<TBean, TKey> GetTable<TBean, TKey>() where TBean : BeanBase
         {
-            return GetTables().GetTable<TBean, string>();
+            return GetTables().GetTable<TBean, TKey>();
         }
 
-        public static TBean GetBean<TBean>(string key) where TBean : BeanBase
+        //设定key为string类型
+        public static TBean GetBean<TBean, TKey>(TKey key) where TBean : BeanBase
         {
-            return GetTable<TBean>().Get(key);
+            return GetTable<TBean, TKey>().Get(key);
         }
     }
 }
