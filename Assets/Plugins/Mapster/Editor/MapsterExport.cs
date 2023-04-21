@@ -10,16 +10,6 @@ namespace Mapster.Editor
     [CreateAssetMenu(fileName = "Mapster", menuName = "Mapster/ExportConfig")]
     public class MapsterExport : ScriptableObject
     {
-        #region 生命周期
-
-        [LabelText("生成前")] [BeforeGenSelector] [BoxGroup("生命周期")]
-        public string before_gen;
-
-        [LabelText("生成后")] [AfterGenSelector] [BoxGroup("生命周期")]
-        public string after_gen;
-
-        #endregion
-
         #region 必要参数
 
         [Required]
@@ -46,7 +36,7 @@ namespace Mapster.Editor
         [Button("生成")]
         public void Gen()
         {
-            GenUtils.Gen(_GetCommand(), before_gen, after_gen);
+            GenUtils.Gen(_GetCommand());
         }
 
         [Button("预览")]

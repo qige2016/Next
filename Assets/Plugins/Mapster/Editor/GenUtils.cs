@@ -13,35 +13,9 @@ namespace Mapster.Editor
         internal static readonly string _DOTNET =
             RuntimeInformation.IsOSPlatform(OSPlatform.Windows) ? "dotnet.exe" : "dotnet";
 
-        public static void Gen(string arguments, string before, string after)
+        public static void Gen(string arguments)
         {
             Debug.Log(arguments);
-
-            IBeforeGen before_gen = null;
-
-            if (!string.IsNullOrEmpty(before))
-            {
-                var type = Type.GetType(before);
-
-                if (type != null)
-                {
-                    before_gen = Activator.CreateInstance(type) as IBeforeGen;
-                }
-            }
-
-            IAfterGen after_gen = null;
-
-            if (!string.IsNullOrEmpty(after))
-            {
-                var type = Type.GetType(after);
-
-                if (type != null)
-                {
-                    after_gen = Activator.CreateInstance(type) as IAfterGen;
-                }
-            }
-
-            before_gen?.Process();
 
             var process = _Run(
                 _DOTNET,
@@ -60,8 +34,6 @@ namespace Mapster.Editor
             }
 
             #endregion
-
-            after_gen?.Process();
 
             AssetDatabase.Refresh();
         }
