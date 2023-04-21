@@ -5,6 +5,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using System;
 using Bright.Serialization;
 using System.Collections.Generic;
 using SimpleJSON;
@@ -48,7 +49,7 @@ public sealed partial class TbRole :ITable<RoleBean, string>{
         PostResolve();
     }
 
-    public void TranslateText(System.Func<string, string, string> translator)
+    public void TranslateText(Func<string, string, string> translator)
     {
         foreach(var v in _dataList)
         {

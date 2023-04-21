@@ -40,7 +40,7 @@ namespace Next.Backend.Entities
         }
     }
 
-    public abstract class AggregateRoot<TKey> : Entity<TKey>, IAggregateRoot<TKey>, IGeneratesDomainEvents
+    public abstract class AggregateRoot<TId> : Entity<TId>, IAggregateRoot<TId>, IGeneratesDomainEvents
     {
         private readonly ICollection<DomainEventRecord> _distributedEvents = new Collection<DomainEventRecord>();
         private readonly ICollection<DomainEventRecord> _localEvents = new Collection<DomainEventRecord>();
@@ -49,7 +49,7 @@ namespace Next.Backend.Entities
         {
         }
 
-        protected AggregateRoot(TKey id) : base(id)
+        protected AggregateRoot(TId id) : base(id)
         {
         }
 

@@ -19,8 +19,8 @@ namespace Next.Backend.Repositories
         int GetCount();
     }
 
-    public interface IReadOnlyRepository<TEntity, TKey> : IReadOnlyRepository<TEntity>
-        where TEntity : class, IEntity<TKey>
+    public interface IReadOnlyRepository<TEntity, TId> : IReadOnlyRepository<TEntity>
+        where TEntity : class, IEntity<TId>
     {
         /// <summary>
         /// Gets an entity with given primary key.
@@ -29,13 +29,13 @@ namespace Next.Backend.Repositories
         /// <param name="id">Primary key of the entity to get</param>
         /// <returns></returns>
         [NotNull]
-        TEntity Get(TKey id);
+        TEntity Get(TId id);
 
         /// <summary>
         /// Gets an entity with given primary key or null if not found.
         /// </summary>
         /// <param name="id">Primary key of the entity to get</param>
         /// <returns></returns>
-        TEntity GetOrDefault(TKey id);
+        TEntity GetOrDefault(TId id);
     }
 }

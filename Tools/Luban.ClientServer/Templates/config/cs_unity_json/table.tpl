@@ -1,3 +1,4 @@
+using System;
 using Bright.Serialization;
 using System.Collections.Generic;
 using SimpleJSON;
@@ -57,7 +58,7 @@ public sealed partial class {{name}} : {{~if x.is_map_table ~}} ITable<{{cs_defi
         PostResolve();
     }
 
-    public void TranslateText(System.Func<string, string, string> translator)
+    public void TranslateText(Func<string, string, string> translator)
     {
         foreach(var v in _dataList)
         {

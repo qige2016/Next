@@ -13,8 +13,8 @@ namespace Next.Backend.Repositories
     {
     }
 
-    public interface IRepository<TEntity, TKey> : IRepository<TEntity>, IReadOnlyRepository<TEntity, TKey>
-        where TEntity : class, IEntity<TKey>
+    public interface IRepository<TEntity, TId> : IRepository<TEntity>, IReadOnlyRepository<TEntity, TId>
+        where TEntity : class, IEntity<TId>
     {
     }
 }

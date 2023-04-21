@@ -15,39 +15,25 @@ public sealed partial class {{name}}
 {
     private readonly Dictionary<string, object> _tables = new Dictionary<string, object>();
 
-    {{~for table in tables ~}}
-{{~if table.comment != '' ~}}
-    /// <summary>
-    /// {{table.escape_comment}}
-    /// </summary>
-{{~end~}}
-    public {{table.full_name}} {{table.name}} {get; }
-    {{~end~}}
-
-    public {{name}}(Func<string, JSONNode> loader)
+    public {{name}}()
     {
-        {{~for table in tables ~}}
-        {{table.name}} = new {{table.full_name}}(loader("{{table.output_data_file}}")); 
-        _tables.Add("{{table.value_type}}", {{table.name}});
-        {{~end~}}
-        PostInit();
-
-        {{~for table in tables ~}}
-        {{table.name}}.Resolve(_tables); 
-        {{~end~}}
-        PostResolve();
     }
 
-    public ITable<TBean, TKey> GetTable<TBean, TKey>() where TBean : BeanBase
+    public ITable<TBean, TKey> GetTable<TBean, TKey>(Func<string, JSONNode> loader) where TBean : BeanBase
     {
-        return (ITable<TBean, TKey>) _tables[typeof(TBean).Name];
-    }
-
-    public void TranslateText(Func<string, string, string> translator)
-    {
+        var _type = typeof(TBean);
         {{~for table in tables ~}}
-        {{table.name}}.TranslateText(translator); 
+        if(_type == typeof({{table.value_type}}))
+        {
+            var _table = new {{table.full_name}}(loader("{{table.output_data_file}}"));
+            _tables.Add("{{table.value_type}}", _table);
+            PostInit();
+            _table.Resolve(_tables);
+            PostResolve();
+            return _table as ITable<TBean, TKey>;
+        }
         {{~end~}}
+        throw new Exception($"Table not found for {_type}");
     }
     
     partial void PostInit();

@@ -6,15 +6,6 @@ namespace Next.Test.Bean.Tests
     public class BeanHelperTests
     {
         [Test]
-        public void GetTables_Should_Return_Tables()
-        {
-            var tables = BeanHelper.GetTables();
-            Assert.IsNotNull(tables);
-            var tbItem = tables.TbItem;
-            Assert.IsNotNull(tbItem);
-        }
-
-        [Test]
         public void GetTable_Should_Return_Table()
         {
             var table = BeanHelper.GetTable<ItemBean, string>();

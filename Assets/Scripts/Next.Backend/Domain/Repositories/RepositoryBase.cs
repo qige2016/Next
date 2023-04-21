@@ -6,8 +6,8 @@ using Razensoft.Mapper;
 
 namespace Next.Backend.Repositories
 {
-    public class RepositoryBase<TEntity, TBean, TKey> : IRepository<TEntity, TKey>
-        where TEntity : class, IEntity<TKey>, new() where TBean : BeanBase
+    public class RepositoryBase<TEntity, TBean, TId> : IRepository<TEntity, TId>
+        where TEntity : class, IEntity<TId>, new() where TBean : BeanBase
     {
         private readonly IMapper<TBean, TEntity> _mapper;
 
@@ -28,12 +28,12 @@ namespace Next.Backend.Repositories
             return bean != null ? _mapper.Map(BeanHelper.GetTable<TBean, string>().GetOrDefault(key)) : null;
         }
 
-        public TEntity Get(TKey id)
+        public TEntity Get(TId id)
         {
             throw new System.NotImplementedException();
         }
 
-        public TEntity GetOrDefault(TKey id)
+        public TEntity GetOrDefault(TId id)
         {
             throw new System.NotImplementedException();
         }

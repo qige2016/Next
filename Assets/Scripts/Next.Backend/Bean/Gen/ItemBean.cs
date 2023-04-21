@@ -5,6 +5,7 @@
 //     the code is regenerated.
 // </auto-generated>
 //------------------------------------------------------------------------------
+using Bright.Config;
 using Bright.Serialization;
 using System.Collections.Generic;
 using SimpleJSON;
@@ -14,7 +15,7 @@ using SimpleJSON;
 namespace Next.Backend.Bean
 {
 
-public sealed partial class ItemBean :  Bright.Config.BeanBase 
+public sealed partial class ItemBean : BeanBase
 {
     public ItemBean(JSONNode _json) 
     {

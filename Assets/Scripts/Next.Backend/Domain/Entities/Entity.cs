@@ -10,26 +10,26 @@ namespace Next.Backend.Entities
         {
         }
 
-        public abstract object[] GetKeys();
+        public abstract object[] GetIds();
     }
 
-    /// <inheritdoc cref="IEntity{TKey}" />
+    /// <inheritdoc cref="IEntity{TId}" />
     [Serializable]
-    public abstract class Entity<TKey> : Entity, IEntity<TKey>
+    public abstract class Entity<TId> : Entity, IEntity<TId>
     {
         /// <inheritdoc/>
-        public virtual TKey Id { get; protected set; }
+        public virtual TId Id { get; protected set; }
 
         protected Entity()
         {
         }
 
-        protected Entity(TKey id)
+        protected Entity(TId id)
         {
             Id = id;
         }
 
-        public override object[] GetKeys()
+        public override object[] GetIds()
         {
             return new object[] {Id};
         }

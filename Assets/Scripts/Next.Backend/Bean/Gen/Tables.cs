@@ -19,31 +19,32 @@ public sealed partial class Tables
 {
     private readonly Dictionary<string, object> _tables = new Dictionary<string, object>();
 
-    public TbItem TbItem {get; }
-    public TbRole TbRole {get; }
-
-    public Tables(Func<string, JSONNode> loader)
+    public Tables()
     {
-        TbItem = new TbItem(loader("tbitem")); 
-        _tables.Add("ItemBean", TbItem);
-        TbRole = new TbRole(loader("tbrole")); 
-        _tables.Add("RoleBean", TbRole);
-        PostInit();
-
-        TbItem.Resolve(_tables); 
-        TbRole.Resolve(_tables); 
-        PostResolve();
     }
 
-    public ITable<TBean, TKey> GetTable<TBean, TKey>() where TBean : BeanBase
+    public ITable<TBean, TKey> GetTable<TBean, TKey>(Func<string, JSONNode> loader) where TBean : BeanBase
     {
-        return (ITable<TBean, TKey>) _tables[typeof(TBean).Name];
-    }
-
-    public void TranslateText(Func<string, string, string> translator)
-    {
-        TbItem.TranslateText(translator); 
-        TbRole.TranslateText(translator); 
+        var _type = typeof(TBean);
+        if(_type == typeof(ItemBean))
+        {
+            var _table = new TbItem(loader("tbitem"));
+            _tables.Add("ItemBean", _table);
+            PostInit();
+            _table.Resolve(_tables);
+            PostResolve();
+            return _table as ITable<TBean, TKey>;
+        }
+        if(_type == typeof(RoleBean))
+        {
+            var _table = new TbRole(loader("tbrole"));
+            _tables.Add("RoleBean", _table);
+            PostInit();
+            _table.Resolve(_tables);
+            PostResolve();
+            return _table as ITable<TBean, TKey>;
+        }
+        throw new Exception($"Table not found for {_type}");
     }
     
     partial void PostInit();
