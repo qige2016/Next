@@ -14,15 +14,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   before_gen: 
   after_gen: 
-  which_dll: Tools/Luban.ClientServer/Luban.ClientServer.dll
-  tpl_path: Tools/Luban.ClientServer/Templates
+  which_dll: 
+  tpl_path: 
   job: cfg --
-  define_xml: DesignerConfigs/Defines/__root__.xml
-  input_data_dir: DesignerConfigs/Datas
-  gen_types: 1028
-  service: all
-  output_data_dir: Assets/StreamingAssets/GenerateDatas/Json
-  output_code_dir: Assets/Scripts/Next.Backend/Bean/Gen
+  define_xml: 
+  input_data_dir: 
+  gen_types: 0
+  service: 
+  output_data_dir: 
+  output_code_dir: 
   output_data_resources_list_file: 
   output_exclude_tags: 
   output_data_file_extension: 

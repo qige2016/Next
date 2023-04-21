@@ -2,38 +2,25 @@
 using Bright.Config;
 using Next.Backend.Bean;
 using Next.Backend.Entities;
-using Razensoft.Mapper;
 
 namespace Next.Backend.Repositories
 {
-    public class RepositoryBase<TEntity, TBean, TId> : IRepository<TEntity, TId>
-        where TEntity : class, IEntity<TId>, new() where TBean : BeanBase
+    public class RepositoryBase<TEntity, TBean, TKey> : IRepository<TEntity>
+        where TEntity : class, IEntity, new() where TBean : BeanBase
     {
-        private readonly IMapper<TBean, TEntity> _mapper;
+        private readonly ITable<TBean, TKey> _table;
 
-        public RepositoryBase(IMapper<TBean, TEntity> mapper)
+        public RepositoryBase(ITable<TBean, TKey> table)
         {
-            _mapper = mapper;
+            _table = table;
         }
 
-        public List<TEntity> GetAll() => _mapper.MapList(BeanHelper.GetTable<TBean, string>().DataList);
-
-        public int GetCount() => BeanHelper.GetTable<TBean, string>().DataList.Count;
-
-        public TEntity Get(string key) => _mapper.Map(BeanHelper.GetTable<TBean, string>().Get(key));
-
-        public TEntity GetOrDefault(string key)
-        {
-            var bean = BeanHelper.GetTable<TBean, string>().GetOrDefault(key);
-            return bean != null ? _mapper.Map(BeanHelper.GetTable<TBean, string>().GetOrDefault(key)) : null;
-        }
-
-        public TEntity Get(TId id)
+        public List<TEntity> GetAll()
         {
             throw new System.NotImplementedException();
         }
 
-        public TEntity GetOrDefault(TId id)
+        public int GetCount()
         {
             throw new System.NotImplementedException();
         }

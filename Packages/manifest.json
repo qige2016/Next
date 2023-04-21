@@ -10,8 +10,6 @@
   ],
   "dependencies": {
     "com.cysharp.unitask": "file:../LocalPackages/UniTask",
-    "com.liuocean.luban_gui": "file:../LocalPackages/LubanGUI",
-    "com.razensoft.mapper": "file:../LocalPackages/Razensoft.Mapper",
     "com.unity.collab-proxy": "1.15.17",
     "com.unity.feature.development": "1.0.1",
     "com.unity.ide.rider": "3.0.14",
@@ -25,6 +23,7 @@
     "com.unity.timeline": "1.6.4",
     "com.unity.ugui": "1.0.0",
     "com.unity.visualscripting": "1.7.8",
+    "jp.hadashikick.vcontainer": "file:../LocalPackages/VContainer",
     "org.nuget.scriban": "2.1.0",
     "com.unity.modules.ai": "1.0.0",
     "com.unity.modules.androidjni": "1.0.0",
@@ -56,7 +55,6 @@
     "com.unity.modules.video": "1.0.0",
     "com.unity.modules.vr": "1.0.0",
     "com.unity.modules.wind": "1.0.0",
-    "com.unity.modules.xr": "1.0.0",
-    "jp.hadashikick.vcontainer": "file:../LocalPackages/VContainer"
+    "com.unity.modules.xr": "1.0.0"
   }
 }

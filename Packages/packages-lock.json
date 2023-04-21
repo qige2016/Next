@@ -6,18 +6,6 @@
       "source": "local",
       "dependencies": {}
     },
-    "com.liuocean.luban_gui": {
-      "version": "file:../LocalPackages/LubanGUI",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
-    "com.razensoft.mapper": {
-      "version": "file:../LocalPackages/Razensoft.Mapper",
-      "depth": 0,
-      "source": "local",
-      "dependencies": {}
-    },
     "com.unity.collab-proxy": {
       "version": "1.15.17",
       "depth": 0,

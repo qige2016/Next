@@ -41,12 +41,12 @@ MonoBehaviour:
     - VContainer.EnableCodeGen
     - UniTask.TextMeshPro
     - UniTask.Addressables
+    - Mapster
     - Sirenix.OdinInspector.CompatibilityLayer.Editor
-    - Luban.Editor
     - UniTask.Editor
     - VContainer.Editor
-    - Sirenix.OdinInspector.Modules.UnityMathematics
     - Next.Test
+    - Sirenix.OdinInspector.Modules.UnityMathematics
     showAdvancedSettings: 1
   addMgrToSceneAutomatically: 0
   autoUpdateReferences: 1

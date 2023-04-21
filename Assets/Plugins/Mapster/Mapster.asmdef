@@ -1,10 +1,7 @@
 {
-    "name": "Next.Backend",
+    "name": "Mapster",
     "rootNamespace": "",
-    "references": [
-        "GUID:7e4e10e2c6ce59042a1fc16226218e3a",
-        "GUID:5bb3133f5b784332ad3e21812262dfc9"
-    ],
+    "references": [],
     "includePlatforms": [],
     "excludePlatforms": [],
     "allowUnsafeCode": false,
