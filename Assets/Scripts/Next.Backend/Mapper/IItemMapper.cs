@@ -5,8 +5,7 @@ using Next.Backend.Entities;
 namespace Next.Backend.Mapper
 {
     [Mapper]
-    public interface IItemMapper
+    public interface IItemMapper : IMapper<Item, ItemBean>
     {
-        Item Map(ItemBean bean);
     }
 }

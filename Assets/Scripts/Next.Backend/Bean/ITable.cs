@@ -13,9 +13,8 @@ namespace Next.Backend.Bean
 
     public interface ITable<TBean, TKey> : ITable<TBean> where TBean : BeanBase
     {
+        List<TBean> DataList { get; }
         TBean GetOrDefault(TKey key);
         TBean Get(TKey key);
-        TBean this[TKey key] { get; }
-        List<TBean> DataList { get; }
     }
 }
