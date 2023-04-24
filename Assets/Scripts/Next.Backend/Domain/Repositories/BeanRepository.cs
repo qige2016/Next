@@ -6,8 +6,8 @@ using Next.Backend.Mapper;
 
 namespace Next.Backend.Repositories
 {
-    public class BeanRepository<TEntity, TBean, TKey> : IBeanRepository<TEntity, TKey>, IReadOnlyRepository<TEntity>
-        where TEntity : class, IEntity, new() where TBean : BeanBase
+    public class BeanRepository<TEntity, TBean, TKey> : IBeanRepository<TEntity, TKey>
+        where TEntity : class, IEntity where TBean : BeanBase
     {
         private readonly ITable<TBean, TKey> table;
         private readonly IMapper<TEntity, TBean> mapper;

@@ -2,6 +2,13 @@
 
 namespace Next.Backend.Mapper
 {
+    public interface IMapper<TDestination>
+    {
+        TDestination Map(object source);
+        
+        List<TDestination> Map(List<object> source);
+    }
+    
     public interface IMapper<TDestination, TSource>
     {
         TDestination Map(TSource source);
