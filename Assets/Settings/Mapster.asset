@@ -12,8 +12,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: bc8dd0428d0a4cb1bb74db40cd692b69, type: 3}
   m_Name: Mapster
   m_EditorClassIdentifier: 
-  before_gen: 
-  after_gen: 
   which_dll: Tools/Mapster.Tool/Mapster.Tool.dll
   assembly_path: Library/ScriptAssemblies/Next.Backend.dll
   output_dir: Assets/Scripts/Next.Backend/Mapper
