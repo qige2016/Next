@@ -18,6 +18,7 @@ namespace Next.Backend.Entities
     public abstract class Entity<TId> : Entity, IEntity<TId>
     {
         /// <inheritdoc/>
+        [ES3Serializable]
         public virtual TId Id { get; protected set; }
 
         protected Entity()
