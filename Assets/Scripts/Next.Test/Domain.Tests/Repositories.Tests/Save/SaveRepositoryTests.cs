@@ -7,7 +7,7 @@ namespace Next.Test.Domain.Tests
     public class SaveRepositoryTests
     {
         private readonly string filePath = "save_repository_tests";
-        private SaveRepository<Item, int> repository;
+        private readonly SaveRepository<Item, int> repository;
 
         public SaveRepositoryTests()
         {
