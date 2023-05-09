@@ -19,23 +19,17 @@ public sealed partial class ItemBean : BeanBase
 {
     public ItemBean(JSONNode _json) 
     {
-        { if(!_json["key"].IsString) { throw new SerializationException(); }  Key = _json["key"]; }
-        { if(!_json["name"].IsString) { throw new SerializationException(); }  Name = _json["name"]; }
-        { if(!_json["desc"].IsString) { throw new SerializationException(); }  Desc = _json["desc"]; }
-        { if(!_json["price"].IsNumber) { throw new SerializationException(); }  Price = _json["price"]; }
-        { var _j = _json["expire_time"]; if (_j.Tag != JSONNodeType.None && _j.Tag != JSONNodeType.NullValue) { { if(!_j.IsNumber) { throw new SerializationException(); }  ExpireTime = _j; } } else { ExpireTime = null; } }
-        { if(!_json["batch_useable"].IsBoolean) { throw new SerializationException(); }  BatchUseable = _json["batch_useable"]; }
+        { if(!_json["Key"].IsString) { throw new SerializationException(); }  Key = _json["Key"]; }
+        { if(!_json["Name"].IsString) { throw new SerializationException(); }  Name = _json["Name"]; }
+        { if(!_json["Desc"].IsString) { throw new SerializationException(); }  Desc = _json["Desc"]; }
         PostInit();
     }
 
-    public ItemBean(string key, string name, string desc, int price, long? expire_time, bool batch_useable ) 
+    public ItemBean(string Key, string Name, string Desc ) 
     {
-        this.Key = key;
-        this.Name = name;
-        this.Desc = desc;
-        this.Price = price;
-        this.ExpireTime = expire_time;
-        this.BatchUseable = batch_useable;
+        this.Key = Key;
+        this.Name = Name;
+        this.Desc = Desc;
         PostInit();
     }
 
@@ -45,7 +39,7 @@ public sealed partial class ItemBean : BeanBase
     }
 
     /// <summary>
-    /// 这是key
+    /// key
     /// </summary>
     public string Key { get; private set; }
     /// <summary>
@@ -56,18 +50,6 @@ public sealed partial class ItemBean : BeanBase
     /// 描述
     /// </summary>
     public string Desc { get; private set; }
-    /// <summary>
-    /// 价格
-    /// </summary>
-    public int Price { get; private set; }
-    /// <summary>
-    /// 过期时间
-    /// </summary>
-    public long? ExpireTime { get; private set; }
-    /// <summary>
-    /// 能否批量使用
-    /// </summary>
-    public bool BatchUseable { get; private set; }
 
     public const int __ID__ = 1241621891;
     public override int GetTypeId() => __ID__;
@@ -87,9 +69,6 @@ public sealed partial class ItemBean : BeanBase
         + "Key:" + Key + ","
         + "Name:" + Name + ","
         + "Desc:" + Desc + ","
-        + "Price:" + Price + ","
-        + "ExpireTime:" + ExpireTime + ","
-        + "BatchUseable:" + BatchUseable + ","
         + "}";
     }
     

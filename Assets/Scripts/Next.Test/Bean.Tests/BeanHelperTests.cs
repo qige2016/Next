@@ -15,7 +15,7 @@ namespace Next.Test.Bean.Tests
         [Test]
         public void GetBean_Should_Return_Bean()
         {
-            var bean = BeanHelper.GetBean<ItemBean, string>("10000");
+            var bean = BeanHelper.GetBean<ItemBean, string>("道具甲");
             Assert.IsNotNull(bean);
         }
     }

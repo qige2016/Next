@@ -1,4 +1,5 @@
 ﻿using Next.Backend.Entities;
+using Next.Backend.Repositories;
 
 namespace Next.Backend.Repositories
 {

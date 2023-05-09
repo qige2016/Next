@@ -1,9 +1,11 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using Next.Backend.Event;
 
 namespace Next.Backend.Entities
 {
+    [Serializable]
     public abstract class AggregateRoot : Entity, IAggregateRoot, IGeneratesDomainEvents
     {
         private readonly ICollection<DomainEventRecord> distributedEvents = new Collection<DomainEventRecord>();
@@ -40,6 +42,7 @@ namespace Next.Backend.Entities
         }
     }
 
+    [Serializable]
     public abstract class AggregateRoot<TId> : Entity<TId>, IAggregateRoot<TId>, IGeneratesDomainEvents
     {
         private readonly ICollection<DomainEventRecord> distributedEvents = new Collection<DomainEventRecord>();

@@ -14,11 +14,10 @@ namespace Next.Test.Domain.Tests
             var table = BeanHelper.GetTable<ItemBean, string>();
             var mapper = new ItemMapper();
             var repository = new BeanRepository<Item, ItemBean, string>(table, mapper);
-            var entity = repository.Get("10000");
+            var entity = repository.Get("道具甲");
             Assert.IsNotNull(entity);
-            Assert.AreEqual("10000", entity.Key);
+            Assert.AreEqual("道具甲", entity.Key);
             Assert.AreEqual("发型", entity.Name);
-            Assert.AreEqual(100, entity.Price);
         }
 
         [Test]
@@ -27,11 +26,10 @@ namespace Next.Test.Domain.Tests
             var table = BeanHelper.GetTable<ItemBean, string>();
             var mapper = new ItemMapper();
             var repository = new BeanRepository<Item, ItemBean, string>(table, mapper);
-            var entity = repository.GetOrDefault("10000");
+            var entity = repository.GetOrDefault("道具甲");
             Assert.IsNotNull(entity);
-            Assert.AreEqual("10000", entity.Key);
+            Assert.AreEqual("道具甲", entity.Key);
             Assert.AreEqual("发型", entity.Name);
-            Assert.AreEqual(100, entity.Price);
             var nullEntity = repository.GetOrDefault("0");
             Assert.IsNull(nullEntity);
         }
@@ -53,7 +51,7 @@ namespace Next.Test.Domain.Tests
             var mapper = new ItemMapper();
             var repository = new BeanRepository<Item, ItemBean, string>(table, mapper);
             var count = repository.GetCount();
-            Assert.AreEqual(10, count);
+            Assert.AreEqual(2, count);
         }
     }
 }

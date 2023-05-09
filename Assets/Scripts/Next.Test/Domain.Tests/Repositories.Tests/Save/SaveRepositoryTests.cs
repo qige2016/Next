@@ -20,8 +20,7 @@ namespace Next.Test.Domain.Tests
             var item = new Item
             {
                 Key = "10000",
-                Name = "发型",
-                Price = 100
+                Name = "发型"
             };
             var insertItem = repository.Insert(item);
             Assert.AreEqual(item, insertItem);
@@ -35,7 +34,6 @@ namespace Next.Test.Domain.Tests
             Assert.IsNotNull(entity);
             Assert.AreEqual("10000", entity.Key);
             Assert.AreEqual("发型", entity.Name);
-            Assert.AreEqual(100, entity.Price);
         }
 
         [Test]
@@ -46,7 +44,6 @@ namespace Next.Test.Domain.Tests
             Assert.IsNotNull(entity);
             Assert.AreEqual("10000", entity.Key);
             Assert.AreEqual("发型", entity.Name);
-            Assert.AreEqual(100, entity.Price);
             var nullEntity = repository.Find(0);
             Assert.IsNull(nullEntity);
         }
@@ -62,7 +59,6 @@ namespace Next.Test.Domain.Tests
             Assert.AreEqual(entity, updateEntity);
             Assert.AreEqual("10000", entity.Key);
             Assert.AreEqual("发型2", entity.Name);
-            Assert.AreEqual(100, entity.Price);
         }
 
         [Test]
@@ -74,7 +70,6 @@ namespace Next.Test.Domain.Tests
             Assert.AreEqual(1, entityList.Count);
             Assert.AreEqual("10000", entityList[0].Key);
             Assert.AreEqual("发型", entityList[0].Name);
-            Assert.AreEqual(100, entityList[0].Price);
         }
 
         [Test]
@@ -84,7 +79,7 @@ namespace Next.Test.Domain.Tests
             var count = repository.GetCount();
             Assert.AreEqual(1, count);
         }
-        
+
         [Test]
         public void Delete_Should_Return_True()
         {

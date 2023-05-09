@@ -44,6 +44,15 @@ public sealed partial class Tables
             PostResolve();
             return _table as ITable<TBean, TKey>;
         }
+        if(_type == typeof(MenpaiBean))
+        {
+            var _table = new TbMenpai(loader("tbmenpai"));
+            _tables.Add("MenpaiBean", _table);
+            PostInit();
+            _table.Resolve(_tables);
+            PostResolve();
+            return _table as ITable<TBean, TKey>;
+        }
         throw new Exception($"Table not found for {_type}");
     }
     

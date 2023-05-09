@@ -15,29 +15,29 @@ using SimpleJSON;
 namespace Next.Backend.Bean
 {
 
-public sealed partial class RoleBean : BeanBase
+public sealed partial class MenpaiBean : BeanBase
 {
-    public RoleBean(JSONNode _json) 
+    public MenpaiBean(JSONNode _json) 
     {
         { if(!_json["Key"].IsString) { throw new SerializationException(); }  Key = _json["Key"]; }
         { if(!_json["Name"].IsString) { throw new SerializationException(); }  Name = _json["Name"]; }
         { if(!_json["Desc"].IsString) { throw new SerializationException(); }  Desc = _json["Desc"]; }
-        { var __json0 = _json["ItemList"]; if(!__json0.IsArray) { throw new SerializationException(); } ItemList = new System.Collections.Generic.List<string>(__json0.Count); foreach(JSONNode __e0 in __json0.Children) { string __v0;  { if(!__e0.IsString) { throw new SerializationException(); }  __v0 = __e0; }  ItemList.Add(__v0); }   }
+        { var __json0 = _json["RoleList"]; if(!__json0.IsArray) { throw new SerializationException(); } RoleList = new System.Collections.Generic.List<string>(__json0.Count); foreach(JSONNode __e0 in __json0.Children) { string __v0;  { if(!__e0.IsString) { throw new SerializationException(); }  __v0 = __e0; }  RoleList.Add(__v0); }   }
         PostInit();
     }
 
-    public RoleBean(string Key, string Name, string Desc, System.Collections.Generic.List<string> ItemList ) 
+    public MenpaiBean(string Key, string Name, string Desc, System.Collections.Generic.List<string> RoleList ) 
     {
         this.Key = Key;
         this.Name = Name;
         this.Desc = Desc;
-        this.ItemList = ItemList;
+        this.RoleList = RoleList;
         PostInit();
     }
 
-    public static RoleBean DeserializeRoleBean(JSONNode _json)
+    public static MenpaiBean DeserializeMenpaiBean(JSONNode _json)
     {
-        return new RoleBean(_json);
+        return new MenpaiBean(_json);
     }
 
     /// <summary>
@@ -53,11 +53,11 @@ public sealed partial class RoleBean : BeanBase
     /// </summary>
     public string Desc { get; private set; }
     /// <summary>
-    /// 背包
+    /// 门人
     /// </summary>
-    public System.Collections.Generic.List<string> ItemList { get; private set; }
+    public System.Collections.Generic.List<string> RoleList { get; private set; }
 
-    public const int __ID__ = -202489498;
+    public const int __ID__ = 1811891698;
     public override int GetTypeId() => __ID__;
 
     public  void Resolve(Dictionary<string, object> _tables)
@@ -75,7 +75,7 @@ public sealed partial class RoleBean : BeanBase
         + "Key:" + Key + ","
         + "Name:" + Name + ","
         + "Desc:" + Desc + ","
-        + "ItemList:" + Bright.Common.StringUtil.CollectionToString(ItemList) + ","
+        + "RoleList:" + Bright.Common.StringUtil.CollectionToString(RoleList) + ","
         + "}";
     }
     
