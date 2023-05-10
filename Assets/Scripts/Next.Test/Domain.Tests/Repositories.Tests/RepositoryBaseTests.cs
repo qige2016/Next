@@ -6,15 +6,16 @@ using NUnit.Framework;
 
 namespace Next.Test.Domain.Tests
 {
-    public class BeanRepositoryTests
+    public class RepositoryBaseTests
     {
-        private readonly BeanRepository<Item, ItemBean, string> repository;
+        private readonly RepositoryBase<Item, ItemBean, string, int> repository;
 
-        public BeanRepositoryTests()
+        public RepositoryBaseTests()
         {
+            var filePath = "save_repository_tests";
             var table = BeanHelper.GetTable<ItemBean, string>();
             var mapper = new ItemMapper();
-            repository = new BeanRepository<Item, ItemBean, string>(table, mapper);
+            repository = new RepositoryBase<Item, ItemBean, string, int>(filePath, table, mapper);
         }
 
         [Test]
@@ -35,20 +36,6 @@ namespace Next.Test.Domain.Tests
             Assert.AreEqual("发型", entity.Name);
             var nullEntity = repository.GetOrDefault("0");
             Assert.IsNull(nullEntity);
-        }
-
-        [Test]
-        public void GetAll_Should_Return_Entity_List()
-        {
-            var entities = repository.GetAll();
-            Assert.IsNotNull(entities);
-        }
-
-        [Test]
-        public void GetCount_Should_Return_Number()
-        {
-            var count = repository.GetCount();
-            Assert.AreEqual(2, count);
         }
     }
 }

@@ -1,10 +1,13 @@
-﻿using Next.Backend.Entities;
+﻿using Next.Backend.Bean;
+using Next.Backend.Entities;
+using Next.Backend.Mapper;
 
 namespace Next.Backend.Repositories
 {
-    public class MenpaiRepository : SaveRepository<Menpai, int>, IMenpaiRepository
+    public class MenpaiRepository : RepositoryBase<Menpai, MenpaiBean, string, int>, IMenpaiRepository
     {
-        public MenpaiRepository(string filePath) : base(filePath)
+        protected MenpaiRepository(string filePath, ITable<MenpaiBean, string> table,
+            IMapper<Menpai, MenpaiBean> mapper) : base(filePath, table, mapper)
         {
         }
     }

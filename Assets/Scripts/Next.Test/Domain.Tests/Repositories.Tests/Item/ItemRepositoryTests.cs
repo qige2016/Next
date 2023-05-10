@@ -1,17 +1,41 @@
-﻿using Next.Backend.Entities;
+﻿using Next.Backend.Bean;
+using Next.Backend.Entities;
+using Next.Backend.Mapper;
 using Next.Backend.Repositories;
 using NUnit.Framework;
 
 namespace Next.Test.Domain.Tests
 {
-    public class SaveRepositoryTests
+    public class ItemRepositoryTests
     {
-        private readonly SaveRepository<Item, int> repository;
+        private readonly ItemRepository repository;
 
-        public SaveRepositoryTests()
+        public ItemRepositoryTests()
         {
             var filePath = "save_repository_tests";
-            repository = new SaveRepository<Item, int>(filePath);
+            var table = BeanHelper.GetTable<ItemBean, string>();
+            var mapper = new ItemMapper();
+            repository = new ItemRepository(filePath, table, mapper);
+        }
+
+        [Test]
+        public void Get_Should_Return_Entity_From_Bean()
+        {
+            var entity = repository.Get("道具甲");
+            Assert.IsNotNull(entity);
+            Assert.AreEqual("道具甲", entity.Key);
+            Assert.AreEqual("发型", entity.Name);
+        }
+
+        [Test]
+        public void GetOrDefault_Should_Return_EntityOrNull()
+        {
+            var entity = repository.GetOrDefault("道具甲");
+            Assert.IsNotNull(entity);
+            Assert.AreEqual("道具甲", entity.Key);
+            Assert.AreEqual("发型", entity.Name);
+            var nullEntity = repository.GetOrDefault("0");
+            Assert.IsNull(nullEntity);
         }
 
         [Test]
@@ -27,7 +51,7 @@ namespace Next.Test.Domain.Tests
         }
 
         [Test]
-        public void Get_Should_Return_Entity()
+        public void Get_Should_Return_Entity_From_Save()
         {
             Insert_Should_Return_Entity();
             var entity = repository.Get(1);
