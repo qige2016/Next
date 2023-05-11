@@ -2,4 +2,6 @@
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cscripts_005Cnext_002Etest_005Cdomain_002Etests_005Crepositories_002Etests/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cscripts_005Cnext_002Etest_005Cdomain_002Etests_005Crepositories_002Etests_005Cbean/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cscripts_005Cnext_002Etest_005Cdomain_002Etests_005Crepositories_002Etests_005Citem/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cscripts_005Cnext_002Etest_005Cdomain_002Etests_005Crepositories_002Etests_005Cmenpai/@EntryIndexedValue">True</s:Boolean>
+	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cscripts_005Cnext_002Etest_005Cdomain_002Etests_005Crepositories_002Etests_005Crole/@EntryIndexedValue">True</s:Boolean>
 	<s:Boolean x:Key="/Default/CodeInspection/NamespaceProvider/NamespaceFoldersToSkip/=assets_005Cscripts_005Cnext_002Etest_005Cdomain_002Etests_005Crepositories_002Etests_005Csave/@EntryIndexedValue">True</s:Boolean></wpf:ResourceDictionary>

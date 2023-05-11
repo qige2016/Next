@@ -26,21 +26,20 @@ namespace Next.Backend.Entities
         /// <summary>
         /// 背包
         /// </summary>
-        [AdaptIgnore]
         [ES3Serializable]
-        public ICollection<Item> Items { get; set; }
+        public List<Item> Items { get; set; }
 
         public Role()
         {
         }
 
 
-        public Role(int id, string key, string name, string desc) : base(id)
+        public Role(int id, string key, string name, string desc, List<Item> items) : base(id)
         {
             Key = key;
             Name = name;
             Desc = desc;
-            Items = new List<Item>();
+            Items = items;
         }
     }
 }

@@ -26,20 +26,19 @@ namespace Next.Backend.Entities
         /// <summary>
         /// 门人
         /// </summary>
-        [AdaptIgnore]
         [ES3Serializable]
-        public ICollection<Role> Roles { get; set; }
+        public List<Role> Roles { get; set; }
 
         public Menpai()
         {
         }
 
-        public Menpai(int id, string key, string name, string desc) : base(id)
+        public Menpai(int id, string key, string name, string desc, List<Role> roles) : base(id)
         {
             Key = key;
             Name = name;
             Desc = desc;
-            Roles = new List<Role>();
+            Roles = roles;
         }
     }
 }
