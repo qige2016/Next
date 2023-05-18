@@ -1,4 +1,6 @@
-﻿namespace Next.Backend
+﻿using VContainer;
+
+namespace Next.Backend
 {
     public static class Program
     {

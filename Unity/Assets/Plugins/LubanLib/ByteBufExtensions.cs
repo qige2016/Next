@@ -1,9 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+﻿#if UNITY
 namespace Bright.Serialization
 {
     public static class ByteBufExtensions
@@ -45,3 +40,4 @@ namespace Bright.Serialization
         }
     }
 }
+#endif

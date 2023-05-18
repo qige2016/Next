@@ -1,0 +1,17 @@
+D:\Next\DotNet\Next.Backend\bin\Debug\net7.0\Next.Backend.exe
+D:\Next\DotNet\Next.Backend\bin\Debug\net7.0\Next.Backend.deps.json
+D:\Next\DotNet\Next.Backend\bin\Debug\net7.0\Next.Backend.runtimeconfig.json
+D:\Next\DotNet\Next.Backend\bin\Debug\net7.0\Next.Backend.dll
+D:\Next\DotNet\Next.Backend\bin\Debug\net7.0\Next.Backend.pdb
+D:\Next\DotNet\Next.Backend\bin\Debug\net7.0\Mapster.Core.dll
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.csproj.AssemblyReference.cache
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.GeneratedMSBuildEditorConfig.editorconfig
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.AssemblyInfoInputs.cache
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.AssemblyInfo.cs
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.csproj.CoreCompileInputs.cache
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.csproj.CopyComplete
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.dll
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\refint\Next.Backend.dll
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.pdb
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\Next.Backend.genruntimeconfig.cache
+D:\Next\DotNet\Next.Backend\obj\Debug\net7.0\ref\Next.Backend.dll

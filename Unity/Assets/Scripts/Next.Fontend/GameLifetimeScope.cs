@@ -1,6 +1,6 @@
 ﻿using VContainer.Unity;
 
-namespace Next
+namespace Next.Fontend
 {
     public class GameLifetimeScope : LifetimeScope
     {

@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using JetBrains.Annotations;
 using Next.Core.Entities;
 
 namespace Next.Core.Repositories
@@ -20,8 +19,7 @@ namespace Next.Core.Repositories
         /// <param name="autoSave"></param>
         /// Set true to automatically save changes to database.
         /// <returns>Entity</returns>
-        [NotNull]
-        TEntity Insert([NotNull] TEntity entity, bool autoSave = false);
+        TEntity Insert(TEntity entity, bool autoSave = false);
 
         /// <summary>
         /// Inserts multiple new entities.
@@ -29,7 +27,7 @@ namespace Next.Core.Repositories
         /// <param name="entities">Entities to be inserted.</param>
         /// <param name="autoSave"></param>
         /// Set true to automatically save changes to database.
-        void InsertMany([NotNull] IEnumerable<TEntity> entities, bool autoSave = false);
+        void InsertMany(IEnumerable<TEntity> entities, bool autoSave = false);
 
         /// <summary>
         /// Updates an existing entity.
@@ -38,8 +36,7 @@ namespace Next.Core.Repositories
         /// <param name="autoSave"></param>
         /// Set true to automatically save changes to database.
         /// <returns>Entity</returns>
-        [NotNull]
-        TEntity Update([NotNull] TEntity entity, bool autoSave = false);
+        TEntity Update(TEntity entity, bool autoSave = false);
 
         /// <summary>
         /// Updates multiple entities.
@@ -47,7 +44,7 @@ namespace Next.Core.Repositories
         /// <param name="entities">Entities to be updated.</param>
         /// <param name="autoSave"></param>
         /// Set true to automatically save changes to database.
-        void UpdateMany([NotNull] IEnumerable<TEntity> entities, bool autoSave = false);
+        void UpdateMany(IEnumerable<TEntity> entities, bool autoSave = false);
 
         /// <summary>
         /// Deletes an entity.
@@ -55,7 +52,7 @@ namespace Next.Core.Repositories
         /// <param name="entity">Entity to be deleted</param>
         /// <param name="autoSave"></param>
         /// Set true to automatically save changes to database.
-        void Delete([NotNull] TEntity entity, bool autoSave = false);
+        void Delete(TEntity entity, bool autoSave = false);
 
         /// <summary>
         /// Deletes multiple entities.
@@ -63,7 +60,7 @@ namespace Next.Core.Repositories
         /// <param name="entities">Entities to be deleted.</param>
         /// <param name="autoSave"></param>
         /// Set true to automatically save changes to database.
-        void DeleteMany([NotNull] IEnumerable<TEntity> entities, bool autoSave = false);
+        void DeleteMany(IEnumerable<TEntity> entities, bool autoSave = false);
     }
 
     public interface IRepository<TEntity, TId> : IRepository<TEntity>, IReadOnlyRepository<TEntity, TId>
@@ -82,6 +79,6 @@ namespace Next.Core.Repositories
         /// </summary>
         /// <param name="ids"></param>
         /// <param name="autoSave"></param>
-        void DeleteMany([NotNull] IEnumerable<TId> ids, bool autoSave = false);
+        void DeleteMany(IEnumerable<TId> ids, bool autoSave = false);
     }
 }

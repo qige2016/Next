@@ -1,5 +1,4 @@
 ﻿using System.Collections.Generic;
-using JetBrains.Annotations;
 using Next.Core.Entities;
 
 namespace Next.Core.Repositories
@@ -28,7 +27,6 @@ namespace Next.Core.Repositories
         /// </summary>
         /// <param name="id">Primary key of the entity to get</param>
         /// <returns>Entity</returns>
-        [NotNull]
         TEntity Get(TId id);
 
         /// <summary>
