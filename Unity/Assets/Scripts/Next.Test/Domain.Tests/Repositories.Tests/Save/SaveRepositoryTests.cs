@@ -1,5 +1,5 @@
-﻿using Next.Backend.Entities;
-using Next.Backend.Repositories;
+﻿using Next.Core.Entities;
+using Next.Core.Repositories;
 using NUnit.Framework;
 
 namespace Next.Test.Domain.Tests

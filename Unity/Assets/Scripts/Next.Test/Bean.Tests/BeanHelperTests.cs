@@ -1,4 +1,4 @@
-﻿using Next.Backend.Bean;
+﻿using Next.Core.Bean;
 using NUnit.Framework;
 
 namespace Next.Test.Bean.Tests

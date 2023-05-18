@@ -455,7 +455,7 @@ D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Mono.Cecil.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\mscorlib.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\netstandard.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Newtonsoft.Json.dll
-D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.Backend.dll
+D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.Core.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.Test.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\nunit.framework.dll
@@ -735,12 +735,12 @@ D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Sirenix.OdinInspec
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Sirenix.OdinInspector.CompatibilityLayer.Editor.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\ES3.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\VContainer.pdb
-D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.Backend.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\UniTask.TextMeshPro.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.Test.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\UniTask.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\UniTask.Addressables.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.pdb
+D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\Next.Core.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\UnityEngine.xml
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\UnityEngine.AIModule.xml
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor-firstpass\UnityEngine.ARModule.xml

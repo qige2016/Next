@@ -344,7 +344,7 @@
 -r:"D:/Next/Unity/Library/PackageCache/com.unity.visualscripting@1.7.8/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/ES3.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/LubanLib.ref.dll"
--r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.Backend.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.Core.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.Test.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Sirenix.OdinInspector.CompatibilityLayer.Editor.ref.dll"

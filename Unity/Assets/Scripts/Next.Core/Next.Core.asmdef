@@ -1,0 +1,17 @@
+{
+    "name": "Next.Core",
+    "rootNamespace": "",
+    "references": [
+        "GUID:7e4e10e2c6ce59042a1fc16226218e3a",
+        "GUID:904fd133ba0a59144aea346734698625"
+    ],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}

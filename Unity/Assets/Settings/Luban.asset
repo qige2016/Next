@@ -22,7 +22,7 @@ MonoBehaviour:
   gen_types: 1028
   service: all
   output_data_dir: Assets/StreamingAssets/GenerateDatas/Json
-  output_code_dir: Assets/Scripts/Next.Backend/Bean/Gen
+  output_code_dir: Assets/Scripts/Next.Core/Bean/Gen
   output_data_resources_list_file: 
   output_exclude_tags: 
   output_data_file_extension: 

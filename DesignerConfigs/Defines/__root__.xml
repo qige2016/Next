@@ -1,6 +1,6 @@
 <root>
 
-	<topmodule name="Next.Backend.Bean"/>
+	<topmodule name="Next.Core.Bean"/>
 
 	<patch name="cn"/>
 	<patch name="en"/>

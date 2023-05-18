@@ -13,5 +13,5 @@ MonoBehaviour:
   m_Name: Mapster
   m_EditorClassIdentifier: 
   which_dll: ../Tools/Mapster.Tool/Mapster.Tool.dll
-  assembly_path: Library/ScriptAssemblies/Next.Backend.dll
-  output_dir: Assets/Scripts/Next.Backend/Mapper
+  assembly_path: Library/ScriptAssemblies/Next.Core.dll
+  output_dir: Assets/Scripts/Next.Core/Mapper

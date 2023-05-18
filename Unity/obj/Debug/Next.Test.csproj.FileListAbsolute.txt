@@ -332,7 +332,7 @@ D:\Next\Unity\Temp\Bin\Debug\Next.Test\Microsoft.CSharp.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\Microsoft.Win32.Primitives.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\mscorlib.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\netstandard.dll
-D:\Next\Unity\Temp\Bin\Debug\Next.Test\Next.Backend.dll
+D:\Next\Unity\Temp\Bin\Debug\Next.Test\Next.Core.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\nunit.framework.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\System.AppContext.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\System.Buffers.dll
@@ -555,7 +555,7 @@ D:\Next\Unity\Temp\Bin\Debug\Next.Test\WinPlayerBuildProgram.Data.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\NiceIO.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\System.Configuration.dll
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\System.EnterpriseServices.dll
-D:\Next\Unity\Temp\Bin\Debug\Next.Test\Next.Backend.pdb
+D:\Next\Unity\Temp\Bin\Debug\Next.Test\Next.Core.pdb
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\LubanLib.pdb
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\UnityEngine.xml
 D:\Next\Unity\Temp\Bin\Debug\Next.Test\UnityEngine.AIModule.xml
