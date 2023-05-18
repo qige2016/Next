@@ -459,7 +459,7 @@ D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\mscorlib.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\netstandard.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Newtonsoft.Json.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Core.dll
-D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.dll
+D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Fontend.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Test.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\nunit.framework.dll
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\ReportGeneratorMerged.dll
@@ -739,12 +739,12 @@ D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Sirenix.OdinInspector.Module
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Sirenix.OdinInspector.CompatibilityLayer.Editor.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\ES3.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\VContainer.pdb
+D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Core.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\UniTask.TextMeshPro.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Test.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\UniTask.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\UniTask.Addressables.pdb
-D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.pdb
-D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Core.pdb
+D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\Next.Fontend.pdb
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\UnityEngine.xml
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\UnityEngine.AIModule.xml
 D:\Next\Unity\Temp\Bin\Debug\Assembly-CSharp-Editor\UnityEngine.ARModule.xml

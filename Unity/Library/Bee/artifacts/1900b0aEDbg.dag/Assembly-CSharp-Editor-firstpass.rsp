@@ -361,7 +361,7 @@
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/ES3.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/LubanLib.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.Core.ref.dll"
--r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.ref.dll"
+-r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.Fontend.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Next.Test.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Sirenix.OdinInspector.CompatibilityLayer.Editor.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aEDbg.dag/Sirenix.OdinInspector.CompatibilityLayer.ref.dll"
