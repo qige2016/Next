@@ -1,4 +1,4 @@
-﻿namespace Next.Backend.Event
+﻿namespace Next.Core.Event
 {
     public static class EventOrderGenerator
     {
