@@ -10,20 +10,20 @@ namespace Next.Fontend
     {
         private AppLifetimeScope _appLifetimeScope;
         private IReadOnlyList<IInitializableService> _services;
-        private ISceneLoader _sceneLoader;
+        private ISceneService _sceneService;
 
         [Inject]
         public void Construct(AppLifetimeScope appLifetimeScope, IReadOnlyList<IInitializableService> allServices,
-            ISceneLoader sceneLoader)
+            ISceneService sceneService)
         {
             _appLifetimeScope = appLifetimeScope;
             _services = allServices;
-            _sceneLoader = sceneLoader;
+            _sceneService = sceneService;
         }
 
         public async UniTask StartAsync(CancellationToken cancellation)
         {
-            _sceneLoader.LoadScene(GameConstants.Scenes.GamePath);
+            
         }
     }
 }

@@ -7,7 +7,7 @@ namespace Next.Fontend
     {
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<SceneLoader>(Lifetime.Singleton).AsImplementedInterfaces();
+            builder.Register<SceneService>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.RegisterEntryPoint<Boot>();
         }
     }
