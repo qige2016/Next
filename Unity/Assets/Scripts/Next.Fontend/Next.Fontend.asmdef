@@ -2,9 +2,10 @@
     "name": "Next.Fontend",
     "rootNamespace": "",
     "references": [
-        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
         "GUID:4389542f5d6481044bc8b303c6d68a45",
-        "GUID:f51ebe6a0ceec4240a699833d6309b23"
+        "GUID:f51ebe6a0ceec4240a699833d6309b23",
+        "GUID:b0214a6008ed146ff8f122a6a9c2f6cc",
+        "GUID:7e4e10e2c6ce59042a1fc16226218e3a"
     ],
     "includePlatforms": [],
     "excludePlatforms": [],
