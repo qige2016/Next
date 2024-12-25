@@ -12,7 +12,9 @@ namespace Next.Fontend
         {
             builder.Register<SceneService>(Lifetime.Singleton).AsImplementedInterfaces();
             builder.Register<MenpaiRepository>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf()
-                .WithParameter("filePath", "menpai_repository_tests").WithParameter("table", BeanHelper.GetTable<MenpaiBean, string>()).WithParameter("mapper", new MenpaiMapper());
+                .WithParameter("filePath", "PERSISTENT_DATA").WithParameter("table", BeanHelper.GetTable<MenpaiBean, string>()).WithParameter("mapper", new MenpaiMapper());
+            builder.Register<RoleRepository>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf()
+                .WithParameter("filePath", "PERSISTENT_DATA").WithParameter("table", BeanHelper.GetTable<RoleBean, string>()).WithParameter("mapper", new RoleMapper());
             builder.RegisterEntryPoint<Boot>();
         }
     }

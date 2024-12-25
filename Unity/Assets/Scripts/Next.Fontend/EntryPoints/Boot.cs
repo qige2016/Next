@@ -11,19 +11,31 @@ namespace Next.Fontend
     {
         private AppLifetimeScope _appLifetimeScope;
         private ISceneService _sceneService;
+        private IReadOnlyList<IInitializableService> _services;
         private MenpaiRepository _menpaiRepository;
+        private RoleRepository _roleRepository;
 
         [Inject]
-        public void Construct(AppLifetimeScope appLifetimeScope, ISceneService sceneService, MenpaiRepository menpaiRepository)
+        public void Construct(AppLifetimeScope appLifetimeScope, ISceneService sceneService, IReadOnlyList<IInitializableService> services, MenpaiRepository menpaiRepository, RoleRepository roleRepository)
         {
             _appLifetimeScope = appLifetimeScope;
             _sceneService = sceneService;
+            _services = services;
             _menpaiRepository = menpaiRepository;
+            _roleRepository = roleRepository;
         }
 
         public async UniTask StartAsync(CancellationToken cancellation)
         {
-           var entity = _menpaiRepository.Get("门派甲");
+            InitializeServices(_services);
+        }
+
+        private void InitializeServices(IReadOnlyList<IInitializableService> services)
+        {
+            foreach (IInitializableService service in services)
+            {
+                service.Initialize();
+            }
         }
     }
 }
