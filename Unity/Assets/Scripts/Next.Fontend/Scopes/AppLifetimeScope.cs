@@ -10,12 +10,20 @@ namespace Next.Fontend
     {
         protected override void Configure(IContainerBuilder builder)
         {
-            builder.Register<SceneService>(Lifetime.Singleton).AsImplementedInterfaces();
-            builder.Register<MenpaiRepository>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf()
+            RegisterEntryPoints(builder);
+            RegisterServices(builder);
+        }
+
+        private void RegisterEntryPoints(IContainerBuilder builder)
+        {
+        }
+
+        private void RegisterServices(IContainerBuilder builder)
+        {
+            builder.Register<MenpaiRepository>(Lifetime.Singleton).AsSelf()
                 .WithParameter("filePath", "PERSISTENT_DATA").WithParameter("table", BeanHelper.GetTable<MenpaiBean, string>()).WithParameter("mapper", new MenpaiMapper());
-            builder.Register<RoleRepository>(Lifetime.Singleton).AsImplementedInterfaces().AsSelf()
+            builder.Register<RoleRepository>(Lifetime.Singleton).AsSelf()
                 .WithParameter("filePath", "PERSISTENT_DATA").WithParameter("table", BeanHelper.GetTable<RoleBean, string>()).WithParameter("mapper", new RoleMapper());
-            builder.RegisterEntryPoint<Boot>();
         }
     }
 }
